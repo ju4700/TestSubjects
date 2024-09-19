@@ -41,3 +41,6 @@ l.reverse()
 print(l)
 l.reverse()
 print(l)
+
+
+print(f"The number pf countries {len(l)}")
