@@ -30,3 +30,14 @@ del invitation[0]
 del invitation[0]
 
 print(invitation)
+
+l = ['Canada', 'Germany', 'USA', 'Switzerland', 'Russia']
+
+print(l)
+print(sorted(l))
+print(l)
+print(sorted(l, reverse=True))
+l.reverse()
+print(l)
+l.reverse()
+print(l)
