@@ -26,3 +26,6 @@ print(sum(square))
 
 square = [s**i for s in range (1, 11)]
 print(square) #list comprehension
+
+arr =[i for i in range (1, 11)]
+print(arr)
