@@ -55,3 +55,15 @@ for i in players[:3]:
 
 newplayers = players[0:3]
 print(newplayers)
+
+list1 = ['a', 'b', 'c', 'd', 'e', 'f']
+print("The first three item of my list are:")
+for i in list1[:3]:
+	print(i)
+
+print("Three items form the middle of the list are:")
+for i in list1[2:5]
+	print(i)
+print("Last three item")
+for i in list1[-3:]:
+	
