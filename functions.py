@@ -1,4 +1,6 @@
-import guests
+#import guests
+#from guests import inv
+
 """alines = []
 
 for i in range(30):
