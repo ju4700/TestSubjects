@@ -62,8 +62,6 @@ for i in list1[:3]:
 	print(i)
 
 print("Three items form the middle of the list are:")
-for i in list1[2:5]
+for i in list1[2:5]:
 	print(i)
 print("Last three item")
-for i in list1[-3:]:
-	
