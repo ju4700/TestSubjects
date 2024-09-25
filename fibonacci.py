@@ -7,4 +7,8 @@ def fibo(n):
     print()
 
 x = int(input("Enter the Fibonacci range: "))
-fibo(x)
+if x < 0:
+    print("Please enter a positive number")
+else:
+    print("The Fibonacci series is: ")
+    fibo(x)
