@@ -93,4 +93,5 @@ r_n = 0
 while n != 0:
     d = n % 10
     r_n = r_n * 10 + d
+    n //= 10
 print("Reverse: ", r_n)
