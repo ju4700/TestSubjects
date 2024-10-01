@@ -95,3 +95,30 @@ while n != 0:
     r_n = r_n * 10 + d
     n //= 10
 print("Reverse: ", r_n)
+
+def fibo(n):
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a = b
+        b = a + b
+    print()
+
+x = int(input("Enter the Fibonacci range: "))
+if x < 0:
+    print("Please enter a positive number")
+else:
+    print("The Fibonacci series is: ")
+    fibo(x)
+
+def factorial(n):
+    res = 1
+    for i in range(1, n+1):
+        res *= i
+    return res
+
+x = int(input("Enter the number to find the factorial: "))
+if x < 0:
+    print("Please enter a positive number")
+else:
+    print("The factorial of", x, "is", factorial(x))
