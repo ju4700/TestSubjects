@@ -21,8 +21,8 @@ def print_list():
 		l.append(int(input()))
 	print(l)
 	#or
-	#l = [int(input()) for i in range(n)]
-	#l = list(map(int, input().split()))
+	""" l = [int(input()) for i in range(n)]
+		l = list(map(int, input().split()))  """
 #merge two lists and sort them
 def merge_sort(l1, l2):
 	l = l1 + l2
