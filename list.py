@@ -1,3 +1,13 @@
+#input list
+lis1 = list(map(int, input().split()))
+lis2 = [int(input()) for i in range(3)]
+lis3 = []
+for i in range(3):
+	lis3.append(int(input()))
+	
+print(f"lis1: {lis1}, lis2: {lis2}, lis3: {lis3}")
+
+
 #find secondlargest number in a list
 def second_largest(l):
 	l = list(set(l))
