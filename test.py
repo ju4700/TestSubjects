@@ -3,7 +3,6 @@ import torch.nn as nn
 import torch.optim as optim
 
 
-# Define the model architecture
 class MatrixInverseModel(nn.Module):
     def __init__(self, input_size):
         super(MatrixInverseModel, self).__init__()
@@ -18,7 +17,6 @@ class MatrixInverseModel(nn.Module):
         return x
 
 
-# Generate training data
 def generate_data(n, matrix_size):
     matrices = []
     inverses = []
@@ -47,16 +45,13 @@ def train(model, data, targets, epochs=1000, learning_rate=0.001):
 
 
 # Initialize the model
-matrix_size = 3  # You can change this as needed
+matrix_size = 3
 model = MatrixInverseModel(matrix_size * matrix_size)
 
-# Generate synthetic data
 data, targets = generate_data(500, matrix_size)
 
-# Train the model
 train(model, data, targets)
 
-# Test on a new matrix
 test_matrix = torch.rand(matrix_size, matrix_size)
 if torch.det(test_matrix) != 0:
     test_matrix_flat = test_matrix.flatten().unsqueeze(0)

@@ -4,18 +4,15 @@ import os
 import time
 import urllib.request
 
-# Constants for caching
 CACHE_DIR = "./cache"
-CACHE_EXPIRY = 60 * 60  # Cache expires after 1 hour
+CACHE_EXPIRY = 60 * 60 
 
-# Fetch GitHub activity function with caching
 def fetch_github_activity(username):
     if not os.path.exists(CACHE_DIR):
         os.makedirs(CACHE_DIR)
 
     cache_file = f"{CACHE_DIR}/{username}.json"
 
-    # Check if cached file exists and is valid
     if os.path.exists(cache_file) and (time.time() - os.path.getmtime(cache_file)) < CACHE_EXPIRY:
         with open(cache_file, "r") as file:
             print("Using cached data.")
@@ -28,8 +25,6 @@ def fetch_github_activity(username):
             if response.status == 200:
                 data = response.read()
                 events = json.loads(data)
-
-                # Save to cache
                 with open(cache_file, "w") as file:
                     json.dump(events, file)
 
@@ -41,7 +36,6 @@ def fetch_github_activity(username):
         print(f"An error occurred: {e}")
         return None
 
-# Display activity with filtering and formatting
 def display_activity(events, event_type=None, output_format="text"):
     if not events:
         print("No recent activity found or an error occurred.")
@@ -96,7 +90,6 @@ def display_activity(events, event_type=None, output_format="text"):
             else:
                 print(f"- {activity}")
 
-# Main function to handle CLI arguments
 def main():
     parser = argparse.ArgumentParser(description="Fetch recent GitHub activity for a user.")
     parser.add_argument("username", help="GitHub username")
