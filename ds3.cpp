@@ -19,24 +19,30 @@ using namespace std;
 // }
 
 void find(int a[], int n, int l1, int l2){
-    int f = a[0], s = a[1];
-    l1 = 0;
-    l2 = 1;
+    int f = a[0], s = a[1]; // Initialize f and s with the first two elements
+    l1 = 0; // Index of the largest element
+    l2 = 1; // Index of the second largest element
+
+    // Swap if the first element is smaller than the second
     if(f < s){
         swap(f, s);
         swap(l1, l2);
     }
+
+    // Iterate through the rest of the array
     for(int i = 2; i < n; i++){
-        if(a[i] > f){
-            s = f;
-            l2 = l1;
-            f = a[i];
-            l1 = i;
-        }else if(a[i] > s){
-            s = a[i];
-            l2 = i;
+        if(a[i] > f){ // If current element is greater than the largest so far
+            s = f; // Update second largest
+            l2 = l1; // Update index of second largest
+            f = a[i]; // Update largest
+            l1 = i; // Update index of largest
+        }else if(a[i] > s){ // If current element is greater than the second largest so far
+            s = a[i]; // Update second largest
+            l2 = i; // Update index of second largest
         }
     }
+
+    // Print the results
     cout << "Largest element " << f << " is at " << l1 << " and second " << s << " is at " << l2 << endl;
 }
 
