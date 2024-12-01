@@ -15,7 +15,7 @@ void find(int a[], int n, int x, int y){
             y = i;
         }
     }
-    cout << "Largest two elements are at index " << x << " and " << y << endl;
+    cout << "Largest element "<< maxi << "is at " << x << " and  second " << secm << "is at " << y << endl;
 }
 
 int main(){
